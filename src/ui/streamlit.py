@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 from PIL import Image
+import os
 
 # --- 1. CẤU HÌNH TRANG ---
 st.set_page_config(
@@ -10,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-API_URL = "http://localhost:8000/predict"
+API_URL = os.getenv("API_URL", "http://localhost:8000/predict")
 
 # --- 2. CSS TÙY CHỈNH (QUAN TRỌNG ĐỂ TĂNG CỠ CHỮ & MÀU SẮC) ---
 st.markdown("""
