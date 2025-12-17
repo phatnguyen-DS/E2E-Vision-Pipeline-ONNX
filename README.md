@@ -10,8 +10,11 @@ This project showcases skills typically expected from an AI Engineer: data engin
 - **Live Web UI:** [https://image-classification-bjbd.onrender.com](https://image-classification-bjbd.onrender.com) (Completed Web UI for recruiters to test)
 
 ### Video Walkthrough
-[![Video Walkthrough](images/hard_sample.png)](images/demo_video.mp4)
-*Click the image above to watch the video walkthrough*
+<video controls width="100%">
+  <source src="images/demo_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ## Key Highlights / Skills Demonstrated
 - **Data Pipeline:** Data ingestion, cleaning, augmentation and dataset splitting implemented in `src/data`.
