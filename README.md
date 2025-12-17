@@ -10,7 +10,8 @@ This project showcases skills typically expected from an AI Engineer: data engin
 - **Live Web UI:** [https://image-classification-bjbd.onrender.com](https://image-classification-bjbd.onrender.com) (Completed Web UI for recruiters to test)
 
 ### Video Walkthrough
-<video controls src="images/Screen Recording 2025-12-17 085752.mp4" width="100%"></video>
+[![Video Walkthrough](images/hard_sample.png)](images/demo_video.mp4)
+*Click the image above to watch the video walkthrough*
 
 ## Key Highlights / Skills Demonstrated
 - **Data Pipeline:** Data ingestion, cleaning, augmentation and dataset splitting implemented in `src/data`.
@@ -108,7 +109,7 @@ streamlit run src/ui/streamlit.py
 
 Below is a real-world example from the `images/` directory illustrating an image with significant noise, irregular lighting, and contrast variations—challenges frequently encountered in production environments.
 
-![](images/Screenshot 2025-12-16 185133.png)
+![](images/hard_sample.png)
 
 **Strategy for handling such anomalies:**
 - **Preprocessing:** Implemented brightness balancing, color normalization, and smart cropping in `src/data/preprocess.py`.
