@@ -120,9 +120,3 @@ Below is a real-world example from the `images/` directory illustrating an image
 - **Robust Loss & Sampling:** Tuned sampling strategies and loss functions to address class imbalance and effectively handle outliers (`src/models/loss.py`).
 - **Inference Safeguards:** Incorporated output filtering and confidence thresholding in `src/test/onnx_demo.py` to prevent over-confident predictions on low-quality inputs.
 
-If you'd like, I can also:
-- Translate this README to English for LinkedIn/GitHub audiences.
-- Add a short `README_EN.md` with bullet-point highlights for recruiters.
-- Create a one-page PDF summary you can attach to applications.
-
-File updated: `README.md` — contains a concise, interview-focused presentation of the project and the AI engineering skills it demonstrates.
