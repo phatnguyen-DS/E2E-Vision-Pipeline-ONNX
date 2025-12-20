@@ -180,16 +180,21 @@ document.addEventListener('DOMContentLoaded', function () {
             const formData = new FormData();
             formData.append('file', file);
             
+            console.log('Calling API with file:', file.name);
+            
             const response = await fetch(API_URL, {
                 method: 'POST',
                 body: formData
             });
             
+            console.log('API Response status:', response.status);
+            
             if (!response.ok) {
-                throw new Error(`Lỗi từ API: ${response.status}`);
+                throw new Error(`Lỗi từ API: ${response.status} ${response.statusText}`);
             }
             
             const data = await response.json();
+            console.log('API Response data:', data);
             
             // Format data from API to match our display function
             const formattedData = {
