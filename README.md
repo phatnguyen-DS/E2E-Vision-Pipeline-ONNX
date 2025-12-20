@@ -6,11 +6,11 @@
 
 ## Tính năng chính
 
-- 🧠 **Mô hình Deep Learning**: Sử dụng ResNet50 được huấn luyện trên bộ dữ liệu ISIC (International Skin Imaging Collaboration)
-- ⚡ **Tối ưu hóa ONNX**: Mô hình được chuyển đổi sang định dạng ONNX để tăng tốc độ suy luận
-- 🌐 **API FastAPI**: Cung cấp endpoint RESTful để tích hợp dễ dàng với các ứng dụng khác
-- 📱 **Giao diện Web Responsive**: Giao diện người dùng hiện đại, thân thiện với mọi thiết bị
-- 🏥 **Hỗ trợ đa ngôn ngữ**: Tên bệnh lý được hiển thị bằng tiếng Việt
+- **Mô hình Deep Learning**: Sử dụng ResNet50 được huấn luyện trên bộ dữ liệu ISIC (International Skin Imaging Collaboration)
+- **Tối ưu hóa ONNX**: Mô hình được chuyển đổi sang định dạng ONNX để tăng tốc độ suy luận
+- **API FastAPI**: Cung cấp endpoint RESTful để tích hợp dễ dàng với các ứng dụng khác
+- **Giao diện Web Responsive**: Giao diện người dùng hiện đại, thân thiện với mọi thiết bị
+- **Hỗ trợ đa ngôn ngữ**: Tên bệnh lý được hiển thị bằng tiếng Việt
 
 ## Demo
 
