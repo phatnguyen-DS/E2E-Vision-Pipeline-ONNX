@@ -158,24 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
         analyzeBtn.textContent = 'Đang phân tích...';
 
         try {
-            // Simulate API call (replace with actual API call)
-            simulateAPICall();
-
-            // Uncomment the following code for actual API call
-            /*
-            const response = await fetch('https://e2e-vision-pipeline-onnx-backend.onrender.com/predict', {
-                method: 'POST',
-                body: formData
-            });
-            
-            if (!response.ok) {
-                throw new Error('Lỗi khi gọi API. Vui lòng thử lại sau.');
-            }
-            
-            const data = await response.json();
-            displayResult(data);
-            */
-
+            // Call actual API
+            await callAPICall(file);
         } catch (error) {
             console.error('Error:', error);
             showNotification(error.message || 'Đã xảy ra lỗi. Vui lòng thử lại sau!', 'danger');
@@ -187,18 +171,44 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Simulate API call with sample data
-    function simulateAPICall() {
-        setTimeout(() => {
-            const sampleData = {
+    // Call API for real diagnosis
+    async function callAPICall(file) {
+        try {
+            // API endpoint from the backend
+            const API_URL = 'https://e2e-vision-pipeline-onnx-backend.onrender.com/predict';
+            
+            const formData = new FormData();
+            formData.append('file', file);
+            
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                body: formData
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Lỗi từ API: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            // Format data from API to match our display function
+            const formattedData = {
                 predictions: [
-                    { class: 'Eczema', confidence: 0.85 },
-                    { class: 'Psoriasis', confidence: 0.12 },
-                    { class: 'Acne', confidence: 0.03 }
+                    { 
+                        class: data.disease, 
+                        confidence: data.confidence,
+                        class_code: data.class_code
+                    }
                 ]
             };
-            displayResult(sampleData);
-        }, 2000);
+            
+            displayResult(formattedData);
+        } catch (error) {
+            console.error('API Error:', error);
+            showNotification(`Lỗi khi gọi API: ${error.message}`, 'danger');
+            loading.style.display = 'none';
+            resultSection.style.display = 'none';
+        }
     }
 
     // Display analysis result
