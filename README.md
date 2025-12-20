@@ -15,7 +15,8 @@
 ## Demo
 
 - **Link Test Deployment**: [https://e2-e-vision-pipeline-onnx.vercel.app/](https://e2-e-vision-pipeline-onnx.vercel.app/)
-- **Video Demo**: [Xem video demo]([images/Screen%20Recording%202025-12-20%20203948.mp4](https://github.com/user-attachments/assets/404fa155-dccc-4df5-95a1-dd1e0801e463))
+- **Video Demo**
+https://github.com/user-attachments/assets/404fa155-dccc-4df5-95a1-dd1e0801e463
 
 ## Cấu trúc dự án
 
